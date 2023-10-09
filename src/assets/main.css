@@ -1,6 +1,5 @@
 @import './base.css';
 
-
 section {
   min-height: 100vh;
   width: 100%;
@@ -25,15 +24,14 @@ h2.section-title::after {
   bottom: 0;
   left: 0;
   background-color: #dedede;
-  transform: scaleX(0); 
+  transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 h2.section-title:hover::after {
-  transform: scaleX(1); 
+  transform: scaleX(1);
 }
-
 
 @media (max-width: 1150px) {
   h2.section-title {
@@ -46,6 +44,3 @@ h2.section-title:hover::after {
     padding-top: 24%;
   }
 }
-
-
-

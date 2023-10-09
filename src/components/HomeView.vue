@@ -1,7 +1,9 @@
 <template>
     <NavbarView />
+
+    <!-- Hero section-->
     <section id="hero">
-        <div class="hero-container text-center" ref="heroContainer">
+        <div class="hero-container text-center">
             <div class="drone" ref="drone"></div>
             <div class="landing-header">
                 <span class="word">Ma</span>
@@ -19,12 +21,17 @@
 
     <!-- Project section-->
     <ProjectView />
+
+
+    <!-- Footer section-->
+    <FooterView />
 </template>
-  
+
 <script>
-import NavbarView from './NavbarView.vue';
-import AboutUsView from './AboutUsView.vue';
-import ProjectView from './ProjectView.vue';
+import NavbarView from './NavbarView.vue'
+import AboutUsView from './AboutUsView.vue'
+import ProjectView from './ProjectView.vue'
+import FooterView from './FooterView.vue'
 
 export default {
     name: 'HomeView',
@@ -32,52 +39,42 @@ export default {
         NavbarView,
         AboutUsView,
         ProjectView,
+        FooterView
     },
-    data() {
-        return {
-            isFirstMouseMovement: true,
-        };
-    },
+
     mounted() {
-        this.followMouseDrone();
+        this.followMouseDrone()
     },
     methods: {
         followMouseDrone() {
-            const heroContainer = this.$refs.heroContainer;
+            const viewport = document.documentElement;
             const drone = this.$refs.drone;
 
+            const droneWidth = drone.offsetWidth;
+            const droneHeight = drone.offsetHeight;
 
-            heroContainer.addEventListener('mousemove', (e) => {
-                const containerRect = heroContainer.getBoundingClientRect();
-                const mouseX = e.clientX - containerRect.left;
-                const mouseY = e.clientY - containerRect.top;
+            viewport.addEventListener('mousemove', (e) => {
+                // Calculate the maximum allowed positions for the drone
+                const maxX = viewport.clientWidth - droneWidth;
+                const maxY = viewport.clientHeight - droneHeight;
 
-                if (this.isFirstMouseMovement) {
-                    // Animate drone to the new position
-                    drone.style.transition = 'all 0.5s ease-in-out';
-                    this.isFirstMouseMovement = false;
-                } else {
-                    // Don't animate for subsequent moves
-                    drone.style.transition = 'none';
-                }
+                // Calculate the new position for the drone, ensuring it stays within bounds
+                let droneX = Math.min(maxX, Math.max(0, e.clientX - droneWidth / 2));
+                let droneY = Math.min(maxY, Math.max(0, e.clientY - droneHeight / 2));
+
+                // Animate drone to the new position
+                drone.style.transition = 'all 0.1s ease-in';
 
                 // Update drone position based on mouse coordinates
-                drone.style.left = mouseX + 'px';
-                drone.style.top = mouseY + 'px';
+                drone.style.left = droneX + 'px';
+                drone.style.top = droneY + 'px';
             });
 
 
-            heroContainer.addEventListener('mouseleave', () => {
+        }
 
-                // Reset drone position with an animation to the bottom right corner
-                drone.style.left = '80%';
-                drone.style.top = '70%';
-                drone.style.transition = 'all 0.5s ease-in-out';
-                this.isFirstMouseMovement = true;
-            });
-        },
-    },
-};
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -141,12 +138,18 @@ export default {
 }
 
 @media (max-width: 768px) {
+
+
     .landing-header {
         font-size: 6.5rem;
     }
 
     .down-arrow {
         margin-top: 29%;
+    }
+
+    .drone {
+        display: none;
     }
 }
 
@@ -170,4 +173,3 @@ export default {
     }
 }
 </style>
-  
