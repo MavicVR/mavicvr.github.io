@@ -27,11 +27,17 @@ jobs:
           mkdir build_files
           cp -r public/* build_files
 
-      - name: Configure Git
-        run: |
-          git config user.email "test@example.com"
-          git config user.name "GitHub Action"
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build_files
+          path: build_files
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
         with:
@@ -40,10 +46,15 @@ jobs:
       - name: Delete existing files
         run: rm -rf *
 
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build_files
+
       - name: Commit files
         run: |
           ls -la
-          cp -r build_files/* .
+          cp -r ${{ github.workspace }}/build_files/* .
           git add .
           git commit -m "Deploy to GitHub Pages"
           git status
