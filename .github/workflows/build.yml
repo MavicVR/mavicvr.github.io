@@ -29,6 +29,11 @@ jobs:
           git config user.email "test@example.com"
           git config user.name "GitHub Action"
 
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
       - name: Commit files
         run: |
           git add .
