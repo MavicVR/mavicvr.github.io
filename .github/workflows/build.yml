@@ -22,7 +22,10 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          pwd
+
 
       - name: Configure Git
         run: |
@@ -39,7 +42,8 @@ jobs:
 
       - name: Commit files
         run: |
-          cp -r /dist/* .
+          pwd
+          cp -r dist/* .
           git add .
           git commit -m "Deploy to GitHub Pages"
           git status
