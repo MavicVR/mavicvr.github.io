@@ -47,9 +47,12 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build_files
+          path: build_files
+          
 
       - name: Commit files
         run: |
+          
           ls -la
           cp -r ${{ github.workspace }}/build_files/* .
           git add .
