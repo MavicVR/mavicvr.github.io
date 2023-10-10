@@ -26,8 +26,6 @@ jobs:
 
       - name: Commit files
         run: |
-          git config --local user.email "
-          git config --local user.name "
           git add .
           git commit -m "Deploy to main branch"
 
