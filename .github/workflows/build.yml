@@ -52,8 +52,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'githubaction@example.comÄ
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "githubaction@example.com"
 
       - name: Commit files
         run: |
