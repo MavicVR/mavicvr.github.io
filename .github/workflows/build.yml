@@ -24,8 +24,8 @@ jobs:
       - name: Build
         run: |
           npm run build
-          mkdir /dist
-          cp -r public/* /dist
+          mkdir build_files
+          cp -r public/* build_files
 
       - name: Configure Git
         run: |
@@ -43,7 +43,7 @@ jobs:
       - name: Commit files
         run: |
           ls -la
-          cp -r /dist/* .
+          cp -r build_files/* .
           git add .
           git commit -m "Deploy to GitHub Pages"
           git status
