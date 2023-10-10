@@ -39,7 +39,7 @@ jobs:
 
       - name: Commit files
         run: |
-          cp -r ../dist/* .
+          cp -r /dist/* .
           git add .
           git commit -m "Deploy to GitHub Pages"
           git status
