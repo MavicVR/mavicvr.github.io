@@ -50,6 +50,11 @@ jobs:
           path: build_files
           
 
+      - name: Configure Git
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'githubaction@example.comÄ
+
       - name: Commit files
         run: |
           
