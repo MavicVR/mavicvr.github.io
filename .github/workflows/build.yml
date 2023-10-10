@@ -24,10 +24,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Configure Git
+        run: |
+          git config user.email "test@example.com"
+          git config user.name "GitHub Action"
+
       - name: Commit files
         run: |
-          git config --local user.email "test@example.com"
-          git config --local user.name "GitHub Action"
           git add .
           git commit -m "Deploy to main branch"
 
@@ -36,4 +39,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
-
