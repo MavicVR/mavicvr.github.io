@@ -25,6 +25,7 @@ jobs:
         run: |
           npm run build
           pwd
+          cd dist
 
 
       - name: Configure Git
@@ -43,7 +44,7 @@ jobs:
       - name: Commit files
         run: |
           pwd
-          cp -r dist/* .
+          cp -r ./dist/* .
           git add .
           git commit -m "Deploy to GitHub Pages"
           git status
