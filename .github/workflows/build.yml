@@ -60,6 +60,7 @@ jobs:
           
           ls -la
           cp -r ${{ github.workspace }}/build_files/* .
+          rm -rf build_files
           git add .
           git commit -m "Deploy to GitHub Pages"
           git status
