@@ -1,12 +1,18 @@
 <template>
-  <PageLoader />
 
-  <div>
     <HomeView />
-  </div>
+
+    <AboutUsView />
+
+    <ProjectView />
+
+    <FooterView />
 </template>
 
 <script setup>
-import HomeView from './components/HomeView.vue'
-import PageLoader from './components/PageLoader.vue'
+import HomeView from './views/HomeView.vue'
+import AboutUsView from './views/AboutUsView.vue';
+import ProjectView from './views/ProjectView.vue';
+import FooterView from './views/FooterView.vue';
+
 </script>

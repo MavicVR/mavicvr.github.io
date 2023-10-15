@@ -42,8 +42,10 @@ jobs:
           ref: main
 
       - name: Delete existing files
-        run: rm -rf *
-
+        run: |
+          shopt -s extglob  # Enable extended globbing
+          rm -rf !("CNAME")
+          
       - name: Download artifacts
         uses: actions/download-artifact@v2
         with:

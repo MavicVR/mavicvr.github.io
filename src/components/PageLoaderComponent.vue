@@ -14,18 +14,15 @@
 
 <style scoped>
 .loading-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: white;
-  top: 0;
-  left: 0;
-  color: var(--color-text);
-  z-index: 999;
-  position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f5f5f5;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
 }
 
 .loading-bar {

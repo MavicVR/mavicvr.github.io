@@ -4,7 +4,10 @@ section {
   min-height: 100vh;
   width: 100%;
 }
-
+.header{
+  position: relative;
+  padding-top: 10%;
+}
 h2.section-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -12,8 +15,6 @@ h2.section-title {
   margin-bottom: 2rem;
   font-family: 'Lato-Bold', sans-serif;
   text-align: center;
-  padding-top: 13%;
-  position: relative; /* Required for pseudo-element */
 }
 
 h2.section-title::after {
@@ -34,13 +35,13 @@ h2.section-title:hover::after {
 }
 
 @media (max-width: 1150px) {
-  h2.section-title {
+  .header{
     padding-top: 20%;
   }
 }
 
 @media (max-width: 763px) {
-  h2.section-title {
+  .header {
     padding-top: 24%;
   }
 }
