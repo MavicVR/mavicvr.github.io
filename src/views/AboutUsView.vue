@@ -50,7 +50,7 @@
           <!-- Person 3 -->
           <div class="col-md-4">
             <div class="card">
-              <img src="../assets/img/users/sproshutinskiy.jpg" alt="Marco Steinberger" class="card-img mx-auto" />
+              <img src="../assets/img/users/msteinberger.jpg" alt="Marco Steinberger" class="card-img mx-auto" />
               <div class="card-body text-center">
                 <h3 class="card-title">Marco Steinberger</h3>
                 <h3 class="user-role">VR App Entwickler</h3>
