@@ -11,7 +11,9 @@
         <div class="row justify-content-center">
           <div class="col-md-4">
             <div class="card">
-              <img src="../assets/img/users/bbhattarai.png" alt="Bishow Bhattarai" class="card-img mx-auto" />
+              <div class="user-image">
+                <img src="../assets/img/users/bbhattarai.jpg" alt="Bishow Bhattarai" class="card-img mx-auto" />
+              </div>
               <div class="card-body text-center">
                 <h3 class="card-title">Bishow Bhattarai</h3>
                 <h3 class="user-role">Bibliothek Entwickler</h3>
@@ -30,7 +32,9 @@
           <!-- Person 2 -->
           <div class="col-md-4">
             <div class="card">
-              <img src="../assets/img/users/sproshutinskiy.jpg" alt="Sergey Proshutinskiy" class="card-img mx-auto" />
+              <div class="user-image">
+                <img src="../assets/img/users/sproshutinskiy.jpg" alt="Sergey Proshutinskiy" class="card-img mx-auto" />
+              </div>
               <div class="card-body text-center">
                 <h3 class="card-title">Sergey Proshutinskiy</h3>
                 <h3 class="user-role">Projektleiter / Schnittstelle Entwickler</h3>
@@ -50,7 +54,9 @@
           <!-- Person 3 -->
           <div class="col-md-4">
             <div class="card">
-              <img src="../assets/img/users/msteinberger.jpg" alt="Marco Steinberger" class="card-img mx-auto" />
+              <div class="user-image">
+                <img src="../assets/img/users/msteinberger.jpg" alt="Marco Steinberger" class="card-img mx-auto" />
+              </div>
               <div class="card-body text-center">
                 <h3 class="card-title">Marco Steinberger</h3>
                 <h3 class="user-role">VR App Entwickler</h3>
@@ -165,13 +171,18 @@ h3.user-role {
 }
 
 
-.card img {
+
+div.user-image {
   width: 200px;
   height: 200px;
+  overflow: hidden;
   border-radius: 50%;
-  margin-top: 20px;
-  border: 5px solid var(--color-background);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-
+  border: 4px solid var(--color-background);
+  margin: 10px auto;
 }
+
+.user-image img{
+  margin-top: -30%;
+}
+
 </style>
