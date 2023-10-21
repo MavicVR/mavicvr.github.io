@@ -56,7 +56,7 @@
   };
   </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .hero-container {
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@
     letter-spacing: 10px;
 
     .word {
-        margin-bottom: 10px; // Adjust the spacing between parts
+        margin-bottom: 10px;
         cursor: pointer;
     }
 }

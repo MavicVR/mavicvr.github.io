@@ -21,7 +21,7 @@
   </div>
 </template>
   
-<style lang="scss" scoped>
+<style scoped>
 .nav-menu {
   display: flex;
   justify-content: center;
