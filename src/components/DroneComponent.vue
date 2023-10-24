@@ -1,84 +1,104 @@
 <template>
     <div id="banner" @mousemove="moveDrone">
-        <div id="drone-box">
-            <img src="https://i.postimg.cc/XJHDYkJZ/drone.png" class="drone-pic">
-            <img src="https://i.postimg.cc/PJCVpvpS/drone-left.png" class="left-pic">
-            <img src="https://i.postimg.cc/j2Bgzqyt/drone-right.png" class="right-pic">
-        </div>
+      <div id="drone-box">
+        <img src="https://i.postimg.cc/XJHDYkJZ/drone.png" class="drone-pic">
+        <img src="https://i.postimg.cc/PJCVpvpS/drone-left.png" class="left-pic">
+        <img src="https://i.postimg.cc/j2Bgzqyt/drone-right.png" class="right-pic">
+      </div>
     </div>
-</template>
-
-<script>
-export default {
+  </template>
+  
+  <script>
+  export default {
     name: 'DroneComponent',
+    data() {
+      return {
+        mouseX: 0,
+        mouseY: 0,
+        droneX: 0,
+        droneY: 0,
+        speed: 0.02,
+      };
+    },
     methods: {
-        moveDrone(event) {
-            const moveX = (event.pageX * -1/2) + 300;
-            const moveY = (event.pageY * -1/3) + 120;
-            const droneBox = document.getElementById('drone-box');
-            // const maxX = window.innerWidth - droneBox.offsetWidth + 100;
-            // const maxY = window.innerHeight - droneBox.offsetHeight + 100;
-            // const x = Math.min(Math.max(moveX, 0), maxX);
-            // const y = Math.min(Math.max(moveY, 0), maxY);
-            droneBox.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
-        }
-    }
-}
-</script>
-
-<style>
-* {
+      constrain(x, min, max) {
+        if (x < min) return min;
+        else if (x > max) return max;
+        return x;
+      },
+      animate() {
+        let distX = this.constrain(this.mouseX, 110, window.innerWidth - 130) - this.droneX;
+        let distY = this.constrain(this.mouseY, 50, window.innerHeight - 50) - this.droneY;
+  
+        this.droneX = this.constrain(this.droneX + distX * this.speed, 110, window.innerWidth - 130);
+        this.droneY = this.constrain(this.droneY + distY * this.speed, 50, window.innerHeight - 50);
+  
+        const drone = document.getElementById("drone-box");
+        drone.style.left = this.droneX + "px";
+        drone.style.top = this.droneY + "px";
+  
+        requestAnimationFrame(this.animate);
+      },
+      moveDrone(event) {
+        this.mouseX = event.pageX;
+        this.mouseY = event.pageY;
+      },
+    },
+    mounted() {
+      this.animate();
+    },
+  };
+  </script>
+  
+  <style>
+  * {
     margin: 0;
     padding: 0;
-}
-
-#banner {
+  }
+  
+  #banner {
     width: 100%;
     height: 100vh;
     position: absolute;
-    background-position: center;
-    background-size: cover;
-}
-
-#drone-box {
-    margin: 150px auto;
-    transition: 2s;
+  }
+  
+  #drone-box {
     width: 200px;
     position: relative;
-    transition: 2s;
-}
-
-.drone-pic {
+    transform: translate(-50%, -50%);
+  }
+  
+  .drone-pic {
     width: 100%;
-}
-
-.left-pic {
+  }
+  
+  .left-pic {
     width: 80px;
     top: 0;
     left: -11px;
     position: absolute;
-    animation: rotation .2s linear infinite;
-}
-
-.right-pic {
+    animation: rotation 0.2s linear infinite;
+  }
+  
+  .right-pic {
     width: 80px;
     top: 0;
     right: -11px;
     position: absolute;
-    animation: rotation .2s linear infinite;
-}
-
-@keyframes rotation {
+    animation: rotation 0.2s linear infinite;
+  }
+  
+  @keyframes rotation {
     100% {
-        transform: rotateY(360deg);
+      transform: rotateY(360deg);
     }
-}
+  }
 
-@media  screen and (max-width: 768px) {
-    
-    #drone-box {
-        display: none;
+  @media screen and (max-width: 768px) {
+    #banner {
+      display: none;
     }
     
-}
-</style>
+  }
+  </style>
+  

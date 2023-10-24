@@ -30,29 +30,8 @@
     components: {
       NavbarView,
       DroneComponent,
-    },
-    mounted() {
-      this.moveDrone(); // Set up the event listener
-    },
-    methods: {
-      moveDrone() {
-        const drone = document.querySelector('.drone');
-        const maxX = window.innerWidth - drone.clientWidth;
-        const maxY = window.innerHeight - drone.clientHeight;
-  
-        document.addEventListener('mousemove', (e) => {
-          const x = e.clientX - drone.clientWidth / 2;
-          const y = e.clientY - drone.clientHeight / 2;
-  
-          const adjustedX = Math.min(maxX, Math.max(0, x));
-          const adjustedY = Math.min(maxY, Math.max(0, y));
-  
-          drone.style.transition = 'all 0.1s ease-in';
-          drone.style.left = adjustedX + 'px';
-          drone.style.top = adjustedY + 'px';
-        });
-      },
-    },
+    }
+    
   };
   </script>
 
