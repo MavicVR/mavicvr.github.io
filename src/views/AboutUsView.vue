@@ -16,7 +16,7 @@
               </div>
               <div class="card-body text-center">
                 <h3 class="card-title">Bishow Bhattarai</h3>
-                <p class="user-role">Bibliothek Entwickler</p>
+                <p class="user-role">Android-VR-Datenübertragung</p>
                 <p class="contact-email"><a href="mailto:bbhattarai@student.tgm.ac.at">bbhattarai@student.tgm.ac.at</a></p>
                 <button @click="toggleText(1)" class="more-user-info" data-bs-toggle="tooltip" data-bs-placement="top"
                   title="Mehr erfahren" data-person="1">
@@ -38,7 +38,7 @@
               </div>
               <div class="card-body text-center">
                 <h3 class="card-title">Sergey Proshutinskiy</h3>
-                <p class="user-role">Projektleiter / Schnittstelle Entwickler</p>
+                <p class="user-role">Projektleiter / DJI-Android-Schnittstelle</p>
                 <p class="contact-email"><a href="mailto:sproshutinskiy@student.tgm.ac.at">sproshutinskiy@student.tgm.ac.at</a></p>
                 <button @click="toggleText(2)" class="more-user-info" data-bs-toggle="tooltip" data-bs-placement="top"
                   title="Mehr erfahren" data-person="2">
@@ -46,7 +46,7 @@
                 </button>
 
                 <p v-show="showText[2]" class="card-text mt-2 themenstellung">
-                  Entwicklung einer Schnittstelle für die Kommunikation zwischen einer DJI-Drohne und
+                  Entwicklung einer (Android) Schnittstelle für die Kommunikation zwischen einer DJI-Drohne und
                   einer VR-Brille.
                 </p>
               </div>
@@ -61,7 +61,7 @@
               </div>
               <div class="card-body text-center">
                 <h3 class="card-title">Marco Steinberger</h3>
-                <p class="user-role">VR App Entwickler</p>
+                <p class="user-role">VR-App</p>
                 <p class="contact-email"><a href="mailto:msteinberger@student.tgm.ac.at">msteinberger@student.tgm.ac.at</a></p>
 
                 <button @click="toggleText(3)" class="more-user-info" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -70,7 +70,7 @@
                 </button>
 
                 <p v-show="showText[3]" class="card-text mt-2 themenstellung">
-                  Entwicklung einer benutzerfreundlichen VR-App für die Steuerung einer Drohne und
+                  Entwicklung einer benutzerfreundlichen VR-App für die Steuerung einer DJI-Drohne und
                   deren Kamera.
                 </p>
               </div>

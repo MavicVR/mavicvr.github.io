@@ -40,9 +40,9 @@
 
           <div v-if="activeContent === 'features'" class="collapse show">
             <ul>
-              <li class="feature">Flüssige Egoperspektive-Drohnensicht in VR.</li>
-              <li class="feature">Kamera- und Drohnensteuerung mit Kopfverfolgung.</li>
-              <li class="feature">Alternative Methoden zur Steuerung von Drohnen.</li>
+              <li class="feature">Flüssiges Live-Stream von einer Drohnenkamera in VR.</li>
+              <li class="feature">Kamera- und Drohnensteuerung durch Kopfbewegungen.</li>
+              <li class="feature">Alternative Methoden zur Steuerung einer Drohne.</li>
 
             </ul>
           </div>
