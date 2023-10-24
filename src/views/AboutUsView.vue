@@ -16,7 +16,8 @@
               </div>
               <div class="card-body text-center">
                 <h3 class="card-title">Bishow Bhattarai</h3>
-                <h3 class="user-role">Bibliothek Entwickler</h3>
+                <p class="user-role">Bibliothek Entwickler</p>
+                <p class="contact-email"><a href="mailto:bbhattarai@student.tgm.ac.at">bbhattarai@student.tgm.ac.at</a></p>
                 <button @click="toggleText(1)" class="more-user-info" data-bs-toggle="tooltip" data-bs-placement="top"
                   title="Mehr erfahren" data-person="1">
                   +
@@ -37,7 +38,8 @@
               </div>
               <div class="card-body text-center">
                 <h3 class="card-title">Sergey Proshutinskiy</h3>
-                <h3 class="user-role">Projektleiter / Schnittstelle Entwickler</h3>
+                <p class="user-role">Projektleiter / Schnittstelle Entwickler</p>
+                <p class="contact-email"><a href="mailto:sproshutinskiy@student.tgm.ac.at">sproshutinskiy@student.tgm.ac.at</a></p>
                 <button @click="toggleText(2)" class="more-user-info" data-bs-toggle="tooltip" data-bs-placement="top"
                   title="Mehr erfahren" data-person="2">
                   +
@@ -59,7 +61,8 @@
               </div>
               <div class="card-body text-center">
                 <h3 class="card-title">Marco Steinberger</h3>
-                <h3 class="user-role">VR App Entwickler</h3>
+                <p class="user-role">VR App Entwickler</p>
+                <p class="contact-email"><a href="mailto:msteinberger@student.tgm.ac.at">msteinberger@student.tgm.ac.at</a></p>
 
                 <button @click="toggleText(3)" class="more-user-info" data-bs-toggle="tooltip" data-bs-placement="top"
                   title="Mehr erfahren" data-person="3">
@@ -154,10 +157,16 @@ button.more-user-info {
   transform: scale(1.01);
 }
 
-h3.user-role {
+p.user-role {
   font-size: 1rem;
   font-family: 'Lato-Bold', sans-serif;
   color: var(--color-text);
+}
+p.contact-email a{
+  font-size: 1rem;
+  font-family: 'Lato-Regular', sans-serif;
+  text-decoration: underline;
+  color: var(--color-background);
 }
 
 .card-text.themenstellung {
