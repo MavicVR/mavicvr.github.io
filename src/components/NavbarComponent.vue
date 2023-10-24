@@ -13,9 +13,9 @@
 
     <div class="nav-content" :class="this.showMobileMenu ? 'open-menu' : 'closed-menu'">
       <ul class="nav-items">
-        <li @click="setActiveNavItem"><a href="#" class="active">Home</a></li>
-        <li @click="setActiveNavItem"><a href="#about_us">Über uns</a></li>
-        <li @click="setActiveNavItem"><a href="#our_project">Projekt</a></li>
+        <li @click="setActiveNavItem"><a href="#" class="active nav-item">Home</a></li>
+        <li @click="setActiveNavItem"><a href="#about_us" class="nav-item" >Über uns</a></li>
+        <li @click="setActiveNavItem"><a href="#our_project" class="nav-item">Projekt</a></li>
       </ul>
     </div>
   </div>
@@ -56,23 +56,23 @@ div.logo {
   margin: 0;
   padding: 0;
   margin-left: 50px;
+}
 
-  li {
-    padding: 0 15px;
-  }
+.nav-items li {
+  padding: 0 15px;
+}
 
-  a {
-    color: var(--color-white);
+.nav-items li a {
+  color: var(--color-white);
     text-decoration: none;
-
-    &.active {
-      border-bottom: 2px solid var(--color-text);
-    }
-
-    &:hover {
-      border-bottom: 2px solid var(--color-text);
-    }
   }
+
+.nav-items li a:hover {
+  border-bottom: 2px solid var(--color-text);
+}
+
+.nav-items li a.active {
+  border-bottom: 2px solid var(--color-text);
 }
 
 .hamburger-menu {

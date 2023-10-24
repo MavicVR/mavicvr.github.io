@@ -37,7 +37,7 @@
               erzielen.
             </p>
           </div>
- 
+
           <div v-if="activeContent === 'features'" class="collapse show">
             <ul>
               <li class="feature">Reibungslose First-Person-Drohnensicht in VR.</li>
@@ -54,25 +54,25 @@
                   <th>Unser Ziel</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody class="milestones-body">
                 <tr>
-                  <td class="reach-date">15.10.2023</td>
-                  <td class="goal-description">Exploration und Machbarkeit durchgeführt.</td>
+                  <td class="milestone-date done">15.10.2023</td>
+                  <td class="goal-description done">Exploration und Machbarkeit durchgeführt.</td>
                 </tr>
                 <tr>
-                  <td>28.10.2023</td>
+                  <td class="milestone-date">28.10.2023</td>
                   <td class="goal-description">Erfolgreiche Verbindung zwischen der Drohne und VR-Brille hergestellt.</td>
                 </tr>
                 <tr>
-                  <td>12.11.2023</td>
+                  <td class="milestone-date">12.11.2023</td>
                   <td class="goal-description">Erfolgreiche Kamerasteuerung mithilfe der VR-Brille implementiert.</td>
                 </tr>
                 <tr>
-                  <td>04.02.2024</td>
+                  <td class="milestone-date">04.02.2024</td>
                   <td class="goal-description">VR-App fertig implementiert und funktionsfähig.</td>
                 </tr>
                 <tr>
-                  <td>29.02.2024</td>
+                  <td class="milestone-date">29.02.2024</td>
                   <td class="goal-description">Testphase abgeschlossen.</td>
                 </tr>
               </tbody>
@@ -111,7 +111,36 @@ export default {
     },
     setActiveButton(buttonIndex) {
       this.activeButton = buttonIndex
+    },
+    checkIfDone() {
+     
+      // // Get all milestones (.milestones-body)
+      //   let milestones = document.querySelectorAll('.milestones-body tr')
+
+      //   console.log(milestones)
+
+      //   // Loop through all milestones
+      //   for (let i = 0; i < milestones.length; i++) {
+      //     // Get the date of the milestone
+      //     let milestoneDate = milestones[i].querySelector('.milestone-date').innerHTML
+
+      //     console.log(milestoneDate)
+
+      //     // Get the current date
+      //     let currentDate = new Date()
+
+      //     // Check if the milestone date is in the past
+      //     if (new Date(milestoneDate) < currentDate) {
+      //       // Add the class "done" to the milestone description
+      //       milestones[i].querySelector('.goal-description').classList.add('done')
+      //     }
+      //   }
+
+      //TODO: Mark milestones as done if the date is in the past automatically
     }
+  },
+  mounted() {
+    this.checkIfDone()
   }
 }
 </script>
@@ -201,6 +230,8 @@ section {
   transition: background-color 0.3s;
 }
 
+
+
 .milestones-table tbody tr:hover {
   background-color: var(--color-light-gray);
 }
@@ -241,5 +272,10 @@ ul li.feature {
     margin-bottom: 10px;
     border-radius: 3px;
   }
+}
+
+td.goal-description.done, td.milestone-date.done {
+  color: var(--color-text);
+  text-decoration: line-through;
 }
 </style>
