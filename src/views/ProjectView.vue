@@ -40,7 +40,7 @@
 
           <div v-if="activeContent === 'features'" class="collapse show">
             <ul>
-              <li class="feature">Reibungslose First-Person-Drohnensicht in VR.</li>
+              <li class="feature">Flüssige Egoperspektive-Drohnensicht in VR.</li>
               <li class="feature">Kamera- und Drohnensteuerung mit Kopfverfolgung.</li>
               <li class="feature">Alternative Methoden zur Steuerung von Drohnen.</li>
 
