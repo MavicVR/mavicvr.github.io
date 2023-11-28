@@ -5,12 +5,7 @@
         <div class="milestone-box">
           <div class="date">{{ milestone.date }}</div>
           <div class="short-text">{{ milestone.title }}</div>
-          <button
-            class="more-info-button"
-            @click="showPopup(index)"
-          >
-            Mehr erfahren
-          </button>
+          <button class="more-info-button" @click="showPopup(index)">Mehr erfahren</button>
         </div>
       </div>
 
@@ -24,15 +19,18 @@
     </div>
 
     <Modal
-      :show="popupOpen !== null"
-      :title="popupOpen !== null ? milestones[popupOpen].title : ''"
-      :date="popupOpen !== null ? milestones[popupOpen].date : ''"
-      :text="popupOpen !== null ? milestones[popupOpen].shortText : ''"
-      :images="popupOpen !== null ? milestones[popupOpen].images : []"
-      @close="closePopup"
-    />
+    :show="popupOpen !== null"
+    :title="popupOpen !== null ? milestones[popupOpen].title : ''"
+    :date="popupOpen !== null ? milestones[popupOpen].date : ''"
+    :images="popupOpen !== null ? milestones[popupOpen].images : []"
+    :text="popupOpen !== null ? milestones[popupOpen].shortText : ''"
+    @close="closePopup"
+  >
+
+  </Modal>
   </div>
 </template>
+
 <script>
 import Modal from "@/components/ModalComponent.vue";
 
@@ -40,15 +38,20 @@ export default {
   data() {
     return {
       milestones: [
-       
-       
-        
+        {
+          date: "28.11.2023",
+          title: "Grundlegende VR-App implementiert",
+          shortText: "VR-App Mockup fertiggestellt und App zur Verbindung mit der Drohne funktionsfähig.",
+          images: [
+         
+          ],
+        },
       ],
       popupOpen: null,
     };
   },
   components: {
-    Modal, 
+    Modal,
   },
   computed: {
     reversedMilestones() {
@@ -86,7 +89,7 @@ export default {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color:  var(--color-background); /* Define your color variable here */
+  color: var(--color-background); /* Define your color variable here */
 }
 
 .short-text {
@@ -115,11 +118,18 @@ export default {
   margin: 10px;
   transition: transform 0.2s;
 }
+
 .milestones-scrollable {
   max-height: 400px; /* Set a suitable maximum height */
   overflow-y: auto;
 }
+
 .milestone {
   width: 100%;
+}
+
+.modal-images {
+  max-height: 200px; /* Set a suitable maximum height */
+  overflow-y: auto;
 }
 </style>

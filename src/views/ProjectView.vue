@@ -60,8 +60,8 @@
                   <td class="goal-description done">Exploration und Machbarkeit durchgeführt.</td>
                 </tr>
                 <tr>
-                  <td class="milestone-date">28.10.2023</td>
-                  <td class="goal-description">Erfolgreiche Verbindung zwischen der Drohne und VR-Brille hergestellt.</td>
+                  <td class="milestone-date done">28.10.2023</td>
+                  <td class="goal-description done">Erfolgreiche Verbindung zwischen der Drohne und VR-Brille hergestellt.</td>
                 </tr>
                 <tr>
                   <td class="milestone-date">12.11.2023</td>
