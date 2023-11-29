@@ -41,7 +41,7 @@ export default {
         {
           date: "28.11.2023",
           title: "Grundlegende VR-App implementiert",
-          shortText: "VR-App Mockup fertiggestellt und App zur Verbindung mit der Drohne funktionsfähig.",
+          shortText: "VR-App zum Testen fertiggestellt und App zur Verbindung mit der Drohne funktionsfähig.",
           images: [
          
           ],
