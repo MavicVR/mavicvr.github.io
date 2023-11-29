@@ -64,7 +64,7 @@
                   <td class="goal-description done">Erfolgreiche Verbindung zwischen der Drohne und VR-Brille hergestellt.</td>
                 </tr>
                 <tr>
-                  <td class="milestone-date">12.11.2023</td>
+                  <td class="milestone-date done">12.11.2023</td>
                   <td class="goal-description">Erfolgreiche Kamerasteuerung mithilfe der VR-Brille implementiert.</td>
                 </tr>
                 <tr>
