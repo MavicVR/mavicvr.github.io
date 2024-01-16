@@ -114,28 +114,6 @@ export default {
     },
     checkIfDone() {
      
-      // // Get all milestones (.milestones-body)
-      //   let milestones = document.querySelectorAll('.milestones-body tr')
-
-      //   console.log(milestones)
-
-      //   // Loop through all milestones
-      //   for (let i = 0; i < milestones.length; i++) {
-      //     // Get the date of the milestone
-      //     let milestoneDate = milestones[i].querySelector('.milestone-date').innerHTML
-
-      //     console.log(milestoneDate)
-
-      //     // Get the current date
-      //     let currentDate = new Date()
-
-      //     // Check if the milestone date is in the past
-      //     if (new Date(milestoneDate) < currentDate) {
-      //       // Add the class "done" to the milestone description
-      //       milestones[i].querySelector('.goal-description').classList.add('done')
-      //     }
-      //   }
-
       //TODO: Mark milestones as done if the date is in the past automatically
     }
   },

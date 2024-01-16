@@ -13,21 +13,19 @@
       <div v-if="reversedMilestones.length === 0" class="milestone">
         <div class="milestone-box">
           <div class="date">Keine Fortschritte gefunden</div>
-          <div class="short-text">Es wurde keine Fortschrittseinträge gefunden.</div>
+          <div class="short-text">Es wurden keine Fortschrittseinträge gefunden.</div>
         </div>
       </div>
     </div>
 
     <Modal
-    :show="popupOpen !== null"
-    :title="popupOpen !== null ? milestones[popupOpen].title : ''"
-    :date="popupOpen !== null ? milestones[popupOpen].date : ''"
-    :images="popupOpen !== null ? milestones[popupOpen].images : []"
-    :text="popupOpen !== null ? milestones[popupOpen].shortText : ''"
-    @close="closePopup"
-  >
-
-  </Modal>
+      :show="popupOpen !== null"
+      :title="popupOpen !== null ? displayedMilestone.title : ''"
+      :date="popupOpen !== null ? displayedMilestone.date : ''"
+      :images="popupOpen !== null ? displayedMilestone.images : []"
+      :text="popupOpen !== null ? displayedMilestone.shortText : ''"
+      @close="closePopup"
+    ></Modal>
   </div>
 </template>
 
@@ -46,11 +44,9 @@ export default {
         },
         {
           date: "16.01.2024",
-          title: "Schnitstelle und Bibliothek implementiert",
+          title: "Schnittstelle und Bibliothek implementiert",
           shortText: "Schnittstelle für die Drohne implementiert und das Bibliothek für die Datenübertragung zwischen der Drohne und der VR grundlegend implementiert.",
-          images: [
-         
-          ],
+          images: [],
         },
       ],
       popupOpen: null,
@@ -64,6 +60,14 @@ export default {
       // Reverse the milestones array to display the newest items first
       return [...this.milestones].reverse();
     },
+    displayedMilestone() {
+      // Return the milestone to display in the modal based on popupOpen index
+      if (this.popupOpen !== null && this.milestones[this.popupOpen]) {
+        return this.milestones[this.popupOpen];
+      } else {
+        return {};
+      }
+    },
   },
   methods: {
     showPopup(index) {
@@ -75,6 +79,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 .milestone-box {
