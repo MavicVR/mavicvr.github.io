@@ -45,7 +45,7 @@ export default {
         {
           date: "16.01.2024",
           title: "Schnittstelle und Bibliothek implementiert",
-          shortText: "Schnittstelle für die Drohne implementiert und das Bibliothek für die Datenübertragung zwischen der Drohne und der VR grundlegend implementiert.",
+          shortText: "Schnittstelle für die Drohne und das Bibliothek für die Datenübertragung zwischen der Drohne und der VR grundlegend implementiert.",
           images: [],
         },
       ],
