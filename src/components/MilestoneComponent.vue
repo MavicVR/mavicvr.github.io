@@ -42,6 +42,12 @@ export default {
           date: "28.11.2023",
           title: "Grundlegende VR-App implementiert",
           shortText: "VR-App zum Testen fertiggestellt und App zur Verbindung mit der Drohne funktionsfähig.",
+          images: [],
+        },
+        {
+          date: "16.01.2024",
+          title: "Schnitstelle und Bibliothek implementiert",
+          shortText: "Schnittstelle für die Drohne implementiert und das Bibliothek für die Datenübertragung zwischen der Drohne und der VR grundlegend implementiert.",
           images: [
          
           ],
