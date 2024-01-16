@@ -62,8 +62,9 @@ export default {
     },
     displayedMilestone() {
       // Return the milestone to display in the modal based on popupOpen index
-      if (this.popupOpen !== null && this.milestones[this.popupOpen]) {
-        return this.milestones[this.popupOpen];
+      let getReversedMilestones = this.reversedMilestones;
+      if (this.popupOpen !== null && this.popupOpen < getReversedMilestones.length) {
+        return getReversedMilestones[this.popupOpen];
       } else {
         return {};
       }
