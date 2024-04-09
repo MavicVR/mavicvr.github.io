@@ -59,7 +59,12 @@ export default {
           shortText: "Videoübertragung von der Drohne zur VR-Brille erfolgreich übertragen und implementiert.",
         },
         {
-          date: "04.04.2024",
+          date: "11.03.2024",
+          title: "Videoanzeige funktionsfähig",
+          shortText: "Die Videoanzeige auf der VR-Brille wurde erfolgreich implementiert und ist funktionsfähig.",
+        },
+        {
+          date: "02.04.2024",
           title: "Drohnensteuerung erfolgreich",
           shortText: "Drohnensteuerung mithilfe der VR-Brille erfolgreich implementiert.",
         },
