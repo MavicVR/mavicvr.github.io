@@ -49,12 +49,12 @@ export default {
           images: [],
         },
         {
-          date:"16.03.2024",
+          date:"16.02.2024",
           title: "Drohneninformationen und Kopfposition Übertragung erfolgreich",
           shortText: "Drohneninformationen und Kopfposition wurden erfolgreich zwischen der Drohne und der VR-Brille übertragen und implementiert."
         },
         {
-          date: "26.03.2024",
+          date: "26.02.2024",
           title: "Videoübertragung erfolgreich",
           shortText: "Videoübertragung von der Drohne zur VR-Brille erfolgreich übertragen und implementiert.",
         },
