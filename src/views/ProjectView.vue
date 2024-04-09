@@ -65,15 +65,15 @@
                 </tr>
                 <tr>
                   <td class="milestone-date done">12.11.2023</td>
-                  <td class="goal-description">Erfolgreiche Kamerasteuerung mithilfe der VR-Brille implementiert.</td>
+                  <td class="goal-description done">Erfolgreiche Kamerasteuerung mithilfe der VR-Brille implementiert.</td>
                 </tr>
                 <tr>
-                  <td class="milestone-date">04.02.2024</td>
-                  <td class="goal-description">VR-App fertig implementiert und funktionsfähig.</td>
+                  <td class="milestone-date done">04.02.2024</td>
+                  <td class="goal-description done">VR-App fertig implementiert und funktionsfähig.</td>
                 </tr>
                 <tr>
-                  <td class="milestone-date">29.02.2024</td>
-                  <td class="goal-description">Testphase abgeschlossen.</td>
+                  <td class="milestone-date done">29.02.2024</td>
+                  <td class="goal-description done">Testphase abgeschlossen.</td>
                 </tr>
               </tbody>
             </table>

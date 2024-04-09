@@ -48,6 +48,22 @@ export default {
           shortText: "Schnittstelle für die Drohne und das Bibliothek für die Datenübertragung zwischen der Drohne und der VR grundlegend implementiert.",
           images: [],
         },
+        {
+          date:"16.03.2024",
+          title: "Drohneninformationen und Kopfposition Übertragung erfolgreich",
+          shortText: "Drohneninformationen und Kopfposition wurden erfolgreich zwischen der Drohne und der VR-Brille übertragen und implementiert."
+        },
+        {
+          date: "26.03.2024",
+          title: "Videoübertragung erfolgreich",
+          shortText: "Videoübertragung von der Drohne zur VR-Brille erfolgreich übertragen und implementiert.",
+        },
+        {
+          date: "04.04.2024",
+          title: "Drohnensteuerung erfolgreich",
+          shortText: "Drohnensteuerung mithilfe der VR-Brille erfolgreich implementiert.",
+        },
+        
       ],
       popupOpen: null,
     };
