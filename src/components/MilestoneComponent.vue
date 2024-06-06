@@ -68,6 +68,16 @@ export default {
           title: "Drohnensteuerung erfolgreich",
           shortText: "Drohnensteuerung mithilfe der VR-Brille erfolgreich implementiert.",
         },
+        {
+          date: "15.04.2024",
+          title: "Drohnensteuerung verbessert",
+          shortText: "Drohnensteuerung mithilfe der VR-Brille verbessert und optimiert.",
+        },
+        {
+          date: "18.04.2024",
+          title: "Testphase abgeschlossen",
+          shortText: "Testphase für die VR-App und die Drohnensteuerung abgeschlossen.",
+        }
         
       ],
       popupOpen: null,
